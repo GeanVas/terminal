@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-line">
+            <span class="terminal-sign"></span>
+            <input type="text" class="terminal-input active" autofocus/>
+        </div>
+
+        <template id="new-line-template">
+            <div class="terminal-line">
+                <span class="terminal-sign"></span>
+                <input type="text" class="terminal-input active" />
+            </div>
+        </template>
+        
+        <template id="options-template">
+            <div class="terminal-line">
+                <div class="terminal-options">
+                    <label class="terminal-option hide"><input id="radio1" name="radio-opt" type="radio">Opcion 1</label>
+                </div>
+            </div>
+        </template>
+
+        <template id="files-template">
+            <div class="terminal-line">
+                <span class="terminal-file hide">File</span>
+            </div>
+        </template>
+    </div>
+</body>
+</html>

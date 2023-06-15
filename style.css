@@ -1,0 +1,99 @@
+:root {
+    --ft-color: #00FF00;
+    --ft-size: 1rem;
+    --bg-color: #000000;
+    --bg-color-2: #080025;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color-2);
+}
+
+.hide {
+    display: none;
+}
+
+.terminal-container {
+    width: 70%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--bg-color);
+}
+
+.terminal-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.terminal-line * {
+    font-size: var(--ft-size);
+}
+
+.terminal-input {
+    flex: 1;
+    border: none;
+    padding-left: .3rem;
+    background-color: black;
+    color: var(--ft-color);
+    font-family: monospace;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+.terminal-input:focus {
+    outline: none;
+}
+/* TODO: Implement in JS */
+.terminal-input:not(.active) {
+    pointer-events: none;
+}
+
+.terminal-sign::before {
+    padding-left: .5rem;
+    color: var(--ft-color);
+    content: "user@user:";
+}
+
+.terminal-sign::after {
+    content: "~$ ";
+    color: var(--ft-color);
+}
+
+.terminal-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.terminal-option {
+    color: var(--ft-color);
+    font-size: calc(var(--ft-size) * .9);
+    width: 100%;
+    padding-left: .5rem;
+}
+.terminal-option input {
+    appearance: none;
+}
+.terminal-option.active {
+    color: black;
+    background-color: var(--ft-color);
+}
+
+.terminal-file {
+    color: var(--ft-color);
+    font-size: calc(var(--ft-size) * .9);
+    padding-left: .5rem;
+}
